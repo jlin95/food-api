@@ -8,7 +8,7 @@
 
 
 ## Code structure
-- TBW
+- graphiql/types contains the model types of the
 
 ## Dependencies
 - Rails 5
