@@ -7,5 +7,8 @@ Types::OrderItemType = GraphQL::ObjectType.define do
   field :unit_price, types.Int, 'Price of each meal'
 
   field :order, Types::OrderType, 'The order of which this order item is under'
-  field :meal, Types::MealType, 'The meal that this order item is tagged to'
+  field :meal, Types::MealType, 'The meal that this order item is tagged to' do
+    resolve -> (obj, args, ctx) { obj.meal }
+
+  end
 end
