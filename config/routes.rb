@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphiql"
+  mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
 
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphiql"
