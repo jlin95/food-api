@@ -29,11 +29,11 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: food-app
-  username: postgres
-  password: psqldb
-  port: 5432
-  host: localhost
+  # #username: food-app
+  # username: postgres
+  # password: psqldb
+  # port: 5432
+  # host: localhost
 
   # The password associated with the postgres role (username).
   #password:
@@ -64,10 +64,10 @@ development:
 test:
   <<: *default
   database: food-app_test
-  username: postgres
-  password: psqldb
-  port: 5432
-  host: localhost
+  # username: postgres
+  # password: psqldb
+  # port: 5432
+  # host: localhost
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -94,3 +94,4 @@ production:
   database: food-app_production
   username: food-app
   password: <%= ENV['FOOD-APP_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
